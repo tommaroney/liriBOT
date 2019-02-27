@@ -12,8 +12,8 @@ The tool will prompt the user to select their intended action.
 Selecting an action will trigger another prompt asking the user for their search input.  Each search prompt has a default entry included, excepting do-what-it-says.
 
 ![concert-this-input-prompt](./read-me-images/concert-this-input-prompt.png)
-![concert-this-input-prompt](./read-me-images/spotify-this-song-input-prompt.png)
-![concert-this-input-prompt](./read-me-images/movie-this-input-prompt.png)
+![spotify-this-song-input-prompt](./read-me-images/spotify-this-song-input-prompt.png)
+![movie-this-input-prompt](./read-me-images/movie-this-input-prompt.png)
 
 concert-this will return information about a band's upcoming show dates and venues.
 
