@@ -20,7 +20,7 @@ function handleOutput(command, output) {
 }
 
 function parseRandom() {
-    let data = fs.readFileSync("./random.txt", "utf8");
+    let data = fs.readFileSync("./random.txt", "ansi");
     let itSaysArr = data.split(",");
     itSaysArr[1] = itSaysArr[1].slice(1, itSaysArr[1].length - 1);
     return itSaysArr;
@@ -45,7 +45,9 @@ function spotifyThisSong(command, songName) {
 
 function concertThis(command, artistName) {
     axios.get(`https://rest.bandsintown.com/artists/` + encodeURI(artistName.trim()) + `/events?app_id=codingbootcamp`).then((response) => {
-        console.log("\n" + artistName + " is playing: ")
+        console.log("\n" + artistName + " upcoming shows: ")
+
+        let output = "";
 
         for(i = 0; i < response.data.length; i++) {
             let region = '';
@@ -53,8 +55,10 @@ function concertThis(command, artistName) {
                 region = ", " + response.data[i].venue.region;
 
             let eventDate = moment(response.data[i].datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY");
-            handleOutput(command, "\nVenue: " + response.data[i].venue.name + "\nLocation: " + response.data[i].venue.city + region + ", " + response.data[i].venue.country + "\nDate: " + eventDate);
+            output += "\nVenue: " + response.data[i].venue.name + "\nLocation: " + response.data[i].venue.city + region + ", " + response.data[i].venue.country + "\nDate: " + eventDate + "\n";
         }
+
+        handleOutput(command, output);
     });
 }
 
