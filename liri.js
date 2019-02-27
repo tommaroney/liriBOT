@@ -71,7 +71,6 @@ inquirer.prompt([
         message: `What would you like to do?`,
         choices: [`concert-this`, `spotify-this-song`, `movie-this`, `do-what-it-says`],
         name: `action`,
-        default: 3,
     },
 ]).then((answers) => {
     let action = answers.action;
