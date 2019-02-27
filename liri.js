@@ -20,7 +20,7 @@ function handleOutput(command, output) {
 }
 
 function parseRandom() {
-    let data = fs.readFileSync("./random.txt", "ansi");
+    let data = fs.readFileSync("./random.txt", "utf8");
     let itSaysArr = data.split(",");
     itSaysArr[1] = itSaysArr[1].slice(1, itSaysArr[1].length - 1);
     return itSaysArr;
