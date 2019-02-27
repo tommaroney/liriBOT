@@ -399,3 +399,15 @@ Language: English
 Plot: A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.
 
 Actors: Tim Ivey, Gena Rowlands, Starletta DuPois, James Garner
+
+movie-this
+
+Movie Title: Blade
+Year: 1998
+IMDB Rating: 7.1/10
+Country of Production: USA
+Language: English, Russian, Serbian
+
+Plot: A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires.
+
+Actors: Wesley Snipes, Stephen Dorff, Kris Kristofferson, N'Bushe Wright
